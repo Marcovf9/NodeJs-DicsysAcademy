@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Productos</h2>
+    <div *ngIf="productos.length > 0; else sinProductos">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of productos">
+            <td>{{ producto.nombre }}</td>
+            <td>{{ producto.precio | currency }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ng-template #sinProductos>
+      <p>No hay productos disponibles para esta categoría.</p>
+    </ng-template>
+  </div>
+  

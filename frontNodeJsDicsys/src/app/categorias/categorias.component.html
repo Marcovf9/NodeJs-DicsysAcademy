@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Categorías</h2>
+    <ul class="list-group">
+      <li
+        *ngFor="let categoria of categorias"
+        class="list-group-item"
+        (click)="seleccionarCategoria(categoria.id)"
+        style="cursor: pointer;"
+      >
+        {{ categoria.nombre }}
+      </li>
+    </ul>
+  </div>
+  
